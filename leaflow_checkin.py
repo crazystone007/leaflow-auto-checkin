@@ -476,10 +476,7 @@ class LeaflowAutoCheckin:
 class MultiAccountManager:
     """多账号管理器 - 简化配置版本"""
     
-    def __init__(self):
-        self.telegram_bot_token = os.getenv('TELEGRAM_BOT_TOKEN', '')
-        self.telegram_chat_id = os.getenv('TELEGRAM_CHAT_ID', '')
-        self.accounts = self.load_accounts()
+   
     
     def load_accounts(self):
         """从环境变量加载多账号信息，支持冒号分隔多账号和单账号"""
